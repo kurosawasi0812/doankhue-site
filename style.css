@@ -1,0 +1,225 @@
+/* Cài đặt chung cho toàn trang */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif; /* Phông chữ dễ đọc cho bài báo */
+    color: #333;
+    background-color: #fcfcfc;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* Phần ảnh bìa (Hero banner) */
+.anh-bia {
+    height: 100vh;
+    background-image: url('https://placehold.co/1920x1080/222/FFF?text=Thay+link+anh+tu+trang+Nhan+Dan+vao+CSS+nay'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anh-bia::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.loi-tu-a {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.loi-tu-a h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    color: #e6b325; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.loi-tu-a p {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+/* Khu vực nội dung bài viết */
+.noi-dung-bai-viet {
+    max-width: 760px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Chữ cái đầu tiên viết to (Drop cap) */
+.chu-to {
+    float: left;
+    font-size: 4.5em;
+    line-height: 0.8;
+    padding-right: 12px;
+    padding-top: 8px;
+    color: #900000;
+    font-family: 'Playfair Display', serif;
+}
+
+.doan-mo-dau p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Căn chỉnh hình ảnh trong bài */
+.anh-minh-hoa {
+    margin: 50px 0;
+    padding: 0;
+}
+
+.anh-minh-hoa img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.anh-minh-hoa figcaption {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+/* Tiêu đề các phần */
+.tieu-de-nho {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    text-align: center;
+    color: #900000;
+    margin: 60px 0 40px;
+}
+
+/* Thiết kế trục thời gian (Timeline) */
+.truc-thoi-gian {
+    border-left: 3px solid #e6b325; 
+    padding-left: 30px;
+    margin-left: 20px;
+}
+
+.cot-moc {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.cot-moc::before {
+    content: '';
+    position: absolute;
+    left: -39.5px; 
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 3px solid #900000;
+    border-radius: 50%;
+}
+
+.nam {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #900000;
+    margin: 0 0 10px 0;
+}
+
+.cau-chuyen p {
+    margin: 0;
+    text-align: justify;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+/* --- PHẦN TRANG TRÍ CHO CÂU HỎI MỚI THÊM --- */
+
+.phan-cau-hoi {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mo-ta-cau-hoi {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hop-cau-hoi {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.noi-dung-cau-hoi {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.danh-sach-dap-an {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nut-dap-an {
+    font-family: 'Lora', serif;
+    font-size: 1em;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #333;
+    border-radius: 6px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Tạo hiệu ứng chuyển màu mượt mà */
+}
+
+/* Hiệu ứng khi lướt chuột qua nút */
+.nut-dap-an:hover {
+    background-color: #f5f5f5;
+    border-color: #900000;
+}
+
+.ket-qua-an {
+    display: none;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Phần chân trang */
+.chan-trang {
+    background-color: #1a1a1a;
+    color: #999;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+    font-size: 0.9em;
+}
+
+/* Tự động thu nhỏ chữ khi xem trên điện thoại */
+@media (max-width: 600px) {
+    .loi-tu-a h1 { font-size: 2.5em; }
+    .loi-tu-a p { font-size: 1.1em; }
+    .truc-thoi-gian { margin-left: 10px; }
+    .hop-cau-hoi { padding: 20px; }
+}
